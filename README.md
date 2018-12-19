@@ -17,7 +17,7 @@ Add these lines to your **Project** build.gradle:
 and add these lines to your **App** build.gradle:
 ```
 	dependencies {
-	        implementation 'com.github.anton-ff:InstagramLikeGallery:0.0.4'
+	        implementation 'com.github.anton-ff:InstagramLikeGallery:x.x.x'
 	}
 ```
 
@@ -36,7 +36,7 @@ and add the dependency:
 	<dependency>
 	    <groupId>com.github.anton-ff</groupId>
 	    <artifactId>InstagramLikeGallery</artifactId>
-	    <version>0.0.4</version>
+	    <version>x.x.x</version>
 	</dependency>
 ```
 
@@ -63,14 +63,14 @@ startActivityForResult(intent, ILGRequestCode.GALLERY_GET_IMAGES);
     }
 ```
 
-### To enable multi-select mode:
+#### To enable multi-select mode:
 ```
 Intent intent = InstagramLikeGallery.getGalleryIntent(context);
 intent.putExtra(ILGConstants.EXTRA_ENABLE_MULTI_SELECT_MODE, true);
 startActivityForResult(intent, ILGRequestCode.GALLERY_GET_IMAGES);
 ```
 
-### To limit the number of images:
+#### To limit the number of images:
 ```
 Intent intent = InstagramLikeGallery.getGalleryIntent(context);
 intent.putExtra(ILGConstants.EXTRA_GALLERY_MAX_IMAGES, MAX_IMAGES);
