@@ -1055,27 +1055,37 @@ public class CameraFragment extends BaseFragment implements View.OnClickListener
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser && !cameraPreviewing) {
-            startCamera();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    activity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            startCamera();
 
-            if(cameraFirstTimePreviewingFlag) {
-                cameraFirstTimePreviewingFlag = false;
-                new AsyncTask<Void, Void, Void>(){
+                            if(cameraFirstTimePreviewingFlag) {
+                                cameraFirstTimePreviewingFlag = false;
+                                new AsyncTask<Void, Void, Void>(){
 
-                    @Override
-                    protected Void doInBackground(Void... voids) {
-                        while(!cameraPreviewing);
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                stopCamera();
-                                startCamera();
+                                    @Override
+                                    protected Void doInBackground(Void... voids) {
+                                        while(!cameraPreviewing);
+                                        getActivity().runOnUiThread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                stopCamera();
+                                                startCamera();
+                                            }
+                                        });
+
+                                        return null;
+                                    }
+                                }.execute();
                             }
-                        });
-
-                        return null;
-                    }
-                }.execute();
-            }
+                        }
+                    });
+                }
+            }, 1000);
         }
     }
 
