@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/include_toolbar"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/toolbar_height"
+    android:layout_height="@dimen/ILG_toolbar_height"
     android:background="@drawable/layout_gallery_camera_toolbar"
     android:theme="@style/ILG_ToolBarTheme"
     app:popupTheme="@style/ILG_ToolBarTheme">

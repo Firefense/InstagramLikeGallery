@@ -17,12 +17,12 @@
             android:name=".activities.GalleryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ILG_AppTheme"
-            android:label="@string/label_gallery_activity"/>
+            android:label="@string/ILG_label_gallery_activity"/>
         <activity
             android:name=".activities.ImageEditingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ILG_AppTheme"
-            android:label="@string/label_image_editing_activity"/>
+            android:label="@string/ILG_label_image_editing_activity"/>
 
         <activity
             android:name=".activities.SelectedImagesActivity"
