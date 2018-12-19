@@ -123,6 +123,7 @@ public class ImageEditingActivity extends BaseActivity {
 
         showLoadingSpinner(Gravity.CENTER);
 
+        btn_toolbar_camera_gallery_next.setEnabled(false);
         new AsyncTask<File, Void, Void>(){
 
             @Override
@@ -164,6 +165,7 @@ public class ImageEditingActivity extends BaseActivity {
                         iv_image_editing_original_picture.setImageBitmap(gpuImage.getBitmapWithFilterApplied());
                         iv_image_editing_picture.setImageBitmap(gpuImage.getBitmapWithFilterApplied());
 
+                        btn_toolbar_camera_gallery_next.setEnabled(true);
                         dismissLoadingSpinner();
                     }
                 });
