@@ -81,7 +81,7 @@ startActivityForResult(intent, ILGRequestCode.GALLERY_GET_IMAGES);
 If you are using ProGuard you might need to add OkHttp's rules: https://github.com/square/okhttp/#proguard
 
 ## License    
-	Copyright (C) 2015 Firefish Communications
+	Copyright (C) 2018 Firefish Communications
 
 	This program is free software: you can redistribute it and/or modify it 
 	under the terms of the GNU Lesser General Public License as published by 
