@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.firefishcomms.instagramlikegallery.views.AutoFitTextureView
+        android:id="@+id/texture_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texture_camera_preview"
+        android:layout_marginHorizontal="16dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/btn_camera_flash_mode"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:tint="@color/ILG_colorMainFont"
+            android:background="@color/ILG_colorTransparent"
+            android:src="@drawable/ic_action_flash_auto"/>
+
+        <ImageButton
+            android:id="@+id/btn_camera_capture"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:tint="@color/tint_camera_button_state"
+            android:background="@color/ILG_colorTransparent"
+            android:src="@drawable/ic_action_camera"/>
+
+        <ImageButton
+            android:id="@+id/btn_camera_facing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:tint="@color/ILG_colorMainFont"
+            android:background="@color/ILG_colorTransparent"
+            android:src="@drawable/ic_action_camera_front"/>
+    </RelativeLayout>
+
+</RelativeLayout>
