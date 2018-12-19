@@ -40,6 +40,43 @@ and add the dependency:
 	</dependency>
 ```
 
+## How to use
+#### To start the Gallery activity:
+```
+Intent intent = InstagramLikeGallery.getGalleryIntent(context);
+startActivityForResult(intent, ILGRequestCode.GALLERY_GET_IMAGES);
+```
+
+#### To get the result:
+```
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode){
+            case ILGRequestCode.GALLERY_GET_IMAGES:
+                if(resultCode == ILGResultCode.RESULT_OK) {
+                    ArrayList<File> images = (ArrayList<File>) data.getSerializableExtra(ILGConstants.EXTRA_GALLERY_IMAGE_FILES);
+                }
+                break;
+        }
+    }
+```
+
+### To enable multi-select mode:
+```
+Intent intent = InstagramLikeGallery.getGalleryIntent(context);
+intent.putExtra(ILGConstants.EXTRA_ENABLE_MULTI_SELECT_MODE, true);
+startActivityForResult(intent, ILGRequestCode.GALLERY_GET_IMAGES);
+```
+
+### To limit the number of images:
+```
+Intent intent = InstagramLikeGallery.getGalleryIntent(context);
+intent.putExtra(ILGConstants.EXTRA_GALLERY_MAX_IMAGES, MAX_IMAGES);
+startActivityForResult(intent, ILGRequestCode.GALLERY_GET_IMAGES);
+```
+
 ## ProGuard
 If you are using ProGuard you might need to add OkHttp's rules: https://github.com/square/okhttp/#proguard
 
