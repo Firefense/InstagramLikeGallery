@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/include_toolbar_camera_gallery"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_below="@+id/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ILG_colorContent">
+
+        <RelativeLayout
+            android:id="@+id/layout_top_section"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true">
+            <ImageView
+                android:id="@+id/iv_image_editing_original_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ILG_colorWhite"
+                android:scaleType="fitCenter"/>
+
+            <ImageView
+                android:id="@+id/iv_image_editing_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ILG_colorWhite"
+                android:scaleType="fitCenter"/>
+
+            <include layout="@layout/layout_loading_panel_full_height"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_bottom_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/layout_top_section"
+            android:background="@color/ILG_colorContent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_image_editing_filters"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:paddingVertical="8dp"
+                android:background="@color/ILG_colorContent"
+                android:clipToPadding="false"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

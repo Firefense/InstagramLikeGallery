@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<include layout="@layout/include_toolbar_camera_gallery"/>-->
+
+    <Button
+        android:id="@+id/show_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show gallery"/>
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_below="@id/show_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorContent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_selected_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="16dp"
+            android:overScrollMode="never"
+            android:clipToPadding="false"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

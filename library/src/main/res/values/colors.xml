@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ILG_colorPrimary">#FFF</color>
+    <color name="ILG_colorPrimaryDark">#FFF</color>
+    <color name="ILG_colorAccent">#039DE1</color>
+    <color name="ILG_colorContent">#EFEFEF</color>
+
+    <color name="ILG_colorTransparent">#00FFFFFF</color>
+
+    <color name="ILG_colorWhite">#FFFFFF</color>
+    <color name="ILG_colorMainFont">#3D3D3D</color>
+    <color name="ILG_colorBlack">#424242</color>
+    <color name="ILG_colorLightGray">#757575</color>
+</resources>

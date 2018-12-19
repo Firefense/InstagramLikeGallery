@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyCustomCamera</string>
+    <string name="label_gallery_activity">Photo</string>
+    <string name="label_image_editing_activity">Filter</string>
+</resources>

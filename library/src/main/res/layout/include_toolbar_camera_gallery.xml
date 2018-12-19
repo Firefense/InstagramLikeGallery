@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/include_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@drawable/layout_gallery_camera_toolbar"
+    android:theme="@style/ILG_ToolBarTheme"
+    app:popupTheme="@style/ILG_ToolBarTheme">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center|left"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/ILG_colorMainFont"/>
+        <com.firefishcomms.library.views.DynamicWidthSpinner
+            android:id="@+id/spinner_toolbar_camera_gallery_select_directory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </com.firefishcomms.library.views.DynamicWidthSpinner>
+
+        <Button
+            android:id="@+id/btn_toolbar_camera_gallery_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="?android:selectableItemBackground"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:textColor="@color/ILG_colorAccent"
+            android:text="Next"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
+
