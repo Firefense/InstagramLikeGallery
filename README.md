@@ -1,1 +1,1 @@
-# instagram-like-gallery-android
+# Instagram-Like Gallery Android Library
