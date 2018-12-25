@@ -1,5 +1,5 @@
 [![](https://jitpack.io/v/anton-ff/InstagramLikeGallery.svg)](https://jitpack.io/#anton-ff/InstagramLikeGallery)
-# Instagram-Like Gallery Android Library
+# Instagram-Like Image Gallery Android Library
 It is an instagram-like image-picker library that allows you to select images from phone gallery or take pictures from Camera (using Camera2 api)
 
 ## Download
